@@ -13,18 +13,14 @@
             text-align: center;
         }
         header {
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-            font-size: 24px;
+            background: url('logo.png') no-repeat center center/cover;
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-        }
-        header img {
-            width: 50px;
-            height: auto;
+            color: #fff;
+            font-size: 32px;
+            font-weight: bold;
         }
         section {
             padding: 50px;
@@ -93,7 +89,6 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Bakwas Studios Logo">
         Bakwas Studios
     </header>
     
@@ -116,14 +111,20 @@
     <div class="our-work">
         <h2>OUR WORK</h2>
         <p>Here are some of our design templates:</p>
-        <div class="work-gallery" id="work-gallery"></div>
+        <div class="work-gallery">
+            <img src="https://source.unsplash.com/random/200x200?design" alt="Work 1">
+            <img src="https://source.unsplash.com/random/200x200?graphic" alt="Work 2">
+            <img src="https://source.unsplash.com/random/200x200?branding" alt="Work 3">
+            <img src="https://source.unsplash.com/random/200x200?illustration" alt="Work 4">
+            <img src="https://source.unsplash.com/random/200x200?art" alt="Work 5">
+        </div>
     </div>
     
     <div class="contact" id="contact">
         <h2>Contact Us</h2>
         <p>Email: contact@bakwasstudios.com</p>
         <p>Phone: +91 87709 52470</p>
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mqkrgypy" method="POST" enctype="multipart/form-data" method="POST">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mqkrgypy" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
@@ -135,29 +136,5 @@
     <footer>
         &copy; 2025 Bakwas Studios. All rights reserved.
     </footer>
-    
-    <script>
-        // Dynamic content using JavaScript
-        document.getElementById("services-list").innerText = "✔ Custom Graphic Design | ✔ High-Quality Templates | ✔ Social Media Graphics | ✔ Creative Visual Branding";
-        
-        document.getElementById("about-text").innerText = "Bakwas Studios is all about bold, creative, and unique designs. We specialize in crafting high-quality templates and custom graphic designs that make brands stand out in the digital world.";
-
-        // Dynamic Work Gallery
-        const workGallery = document.getElementById("work-gallery");
-        const templates = [
-            "https://via.placeholder.com/200",
-            "https://via.placeholder.com/200",
-            "https://via.placeholder.com/200",
-            "https://via.placeholder.com/200",
-            "https://via.placeholder.com/200"
-        ];
-
-        templates.forEach(template => {
-            let img = document.createElement("img");
-            img.src = template;
-            img.alt = "Design Template";
-            workGallery.appendChild(img);
-        });
-    </script>
 </body>
 </html>
